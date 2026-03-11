@@ -1,0 +1,31 @@
+/* base.css */
+h1{
+    color: red;
+}
+h2{
+    color: blue;
+}
+h3{
+    color: green;
+}
+p{
+    color: black;
+}
+.title{
+    color: purple;
+}
+.section{
+    color: orange;
+}
+.highlight{
+    color: pink;
+}
+.big{
+    color: brown;
+}
+#main{
+    color: gray;
+}
+#special{
+    color: cyan;
+}
