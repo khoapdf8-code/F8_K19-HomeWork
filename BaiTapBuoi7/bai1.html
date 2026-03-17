@@ -6,178 +6,132 @@
     <title>Trung tâm cấu hình giao diện</title>
     <style>
        
-        * {
-            box-sizing: border-box;
-        }
         body {
-            font-family: "Times New Roman", Times, serif;
-            background-color: #f3f4f6; /* common.contentArea.background */
-            margin: 20px;
+            font-family: "Times New Roman";
+            background-color: #f3f4f6; 
             font-size: 16px;
         }
-
-        /* Khung Panel trung tâm */
         .panel {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #f9fafb; /* common.panel.background */
-            color: #111827;            /* common.panel.text */
-            border: 2px solid #000;
+            background-color: #f9fafb; 
+            color: #111827;            
         }
-
-        /* Tiêu đề ứng dụng */
-        .header {
-            background-color: #f98000; /* common.header.background */
-            color: #f9fafb;            /* common.header.text */
-            font-size: 24px;
-            font-weight: bold;
-            padding: 15px 20px;
+        .title1 {
+            background-color: #f98000; 
+            color: #f9fafb;  
+            font-size: 30px;          
         }
-
-        .content {
-            padding: 0 20px 20px 20px;
+        .select_nm {
+            background-color: #e5e7eb; 
+            color: #111827;            
         }
-
-        /* Tiêu đề từng nhóm */
-        .group-title {
-            margin-top: 25px;
-            margin-bottom: 15px;
-            background-color: #e5e7eb; /* common.groupTitle.background */
-            color: #111827;            /* common.groupTitle.text */
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-weight: bold;
-        }
-
-        /* Nút bấm (Label) mặc định */
         label {
-            margin-right: 20px;
             cursor: pointer;
-            transition: 0.2s;
-            padding: 4px 10px;
-            border-radius: 4px;
-            background-color: #eef2ff; /* common.labelDefault.background */
-            color: #4b5563;            /* common.labelDefault.text */
+            background-color: #eef2ff; 
+            color: #4b5563;            
         }
         
         input[type="radio"], input[type="checkbox"] {
-            margin-right: 5px;
             cursor: pointer;
-            transform: scale(1.1);
+        }
+        
+        /* Theme */
+        #rad-light:checked + label { background-color: #fff8cc; color: #8b5e00;  }
+        #rad-dark:checked + label { background-color: #111827; color: #f9fafb;  }
+
+        /* Color */
+        #red:checked + label { background-color: #fee2e2; color: #991b1b;  }
+        #blue:checked + label { background-color: #dbeafe; color: #1d4ed8;  }
+        #green:checked + label { background-color: #dcfce7; color: #166534; }
+
+        /* Language */
+        #tieng-viet:checked + label { background-color: #bbf7d0; color: #166534;  }
+        #english:checked + label { background-color: #bfdbfe; color: #1d4ed8;  }
+
+        /* Options */
+        #chk-nangcao:checked + label { background-color: #fef3c7; color: #92400e;  }
+        #chk-tietkiem:checked + label { background-color: #bbf7d0; color: #15803d;  }
+        #chk-canhbao:checked + label { background-color: #fee2e2; color: #b91c1c;  }
+        
+       
+        .displ-res {
+            background-color: #ffffff; 
+            color: #9ca3af;            
         }
 
+        
 
-        /* Nhóm 1: Theme */
-        #r-light:checked + label { background-color: #fff8cc; color: #8b5e00; font-weight: bold; }
-        #r-dark:checked + label { background-color: #111827; color: #f9fafb; font-weight: bold; }
+        /* Theme */
+        #rad-light:checked ~ .reslt .res-light { background-color: #fff8cc; color: #111827;  }
+        #rad-dark:checked ~ .reslt .res-dark { background-color: #111827; color: #f9fafb;  }
 
-        /* Nhóm 2: Color */
-        #r-red:checked + label { background-color: #fee2e2; color: #991b1b; font-weight: bold; }
-        #r-blue:checked + label { background-color: #dbeafe; color: #1d4ed8; font-weight: bold; }
-        #r-green:checked + label { background-color: #dcfce7; color: #166534; font-weight: bold; }
+        /* Color */
+        #red:checked ~ .reslt .res-do { background-color: #fee2e2; color: #7f1d1d;  }
+        #blue:checked ~ .reslt .res-xanh { background-color: #dbeafe; color: #1d4ed8;  }
+        #green:checked ~ .reslt .res-xanhla { background-color: #dcfce7; color: #166534;  }
 
-        /* Nhóm 3: Language */
-        #r-vi:checked + label { background-color: #bbf7d0; color: #166534; font-weight: bold; }
-        #r-en:checked + label { background-color: #bfdbfe; color: #1d4ed8; font-weight: bold; }
+        /* Language  */
+        #tieng-viet:checked ~ .reslt .res-tv { color: #166534;  }
+        #english:checked ~ .reslt .res-ta { color: #1d4ed8;  }
 
-        /* Nhóm 4: Options */
-        #c-adv:checked + label { background-color: #fef3c7; color: #92400e; font-weight: bold; }
-        #c-eco:checked + label { background-color: #bbf7d0; color: #15803d; font-weight: bold; }
-        #c-warn:checked + label { background-color: #fee2e2; color: #b91c1c; font-weight: bold; }
-
-
-      
-        .results {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 2px solid #e5e7eb;
-        }
-        .res-item {
-            padding: 12px;
-            margin-bottom: 8px;
-            transition: all 0.3s ease;
-            border-radius: 4px;
-            background-color: #ffffff; /* common.contentDefault.background */
-            color: #9ca3af;            /* common.contentDefault.text (common.inactive) */
-        }
-
-      
-
-        /* Nhóm 1: Theme */
-        #r-light:checked ~ .results .d-light { background-color: #fff8cc; color: #111827; font-weight: bold; }
-        #r-dark:checked ~ .results .d-dark { background-color: #111827; color: #f9fafb; font-weight: bold; }
-
-        /* Nhóm 2: Color */
-        #r-red:checked ~ .results .d-red { background-color: #fee2e2; color: #7f1d1d; font-weight: bold; }
-        #r-blue:checked ~ .results .d-blue { background-color: #dbeafe; color: #1d4ed8; font-weight: bold; }
-        #r-green:checked ~ .results .d-green { background-color: #dcfce7; color: #166534; font-weight: bold; }
-
-        /* Nhóm 3: Language  */
-        #r-vi:checked ~ .results .d-vi { color: #166534; font-weight: bold; font-size: 1.15em; }
-        #r-en:checked ~ .results .d-en { color: #1d4ed8; font-weight: bold; font-size: 1.15em; }
-
-        /* Nhóm 4: Options */
-        #c-adv:checked ~ .results .d-adv { background-color: #fef3c7; color: #92400e; font-weight: bold; }
-        #c-eco:checked ~ .results .d-eco { background-color: #bbf7d0; color: #166534; font-weight: bold; }
-        #c-warn:checked ~ .results .d-warn { background-color: #fee2e2; color: #b91c1c; font-weight: bold; }
+        /* Options */
+        #chk-nangcao:checked ~ .reslt .res-nangcao { background-color: #fef3c7; color: #92400e;  }
+        #chk-tietkiem:checked ~ .reslt .res-tietkiem { background-color: #bbf7d0; color: #166534;  }
+        #chk-canhbao:checked ~ .reslt .res-canhbao { background-color: #fee2e2; color: #b91c1c;  }
 
     </style>
 </head>
 <body>
 
     <div class="panel">
-        <div class="header">Trung tâm cấu hình giao diện (Demo)</div>
-        
+        <div class="title1">Trung tâm cấu hình giao diện (Demo)</div>
+        <br><br>
         <div class="content">
-            <div class="group-title">Chọn giao diện (Theme):</div>
-            <input type="radio" name="theme" id="r-light" checked>
-            <label for="r-light">Light</label>
-            
-            <input type="radio" name="theme" id="r-dark">
-            <label for="r-dark">Dark</label>
+            <div class="select_nm">Chọn giao diện (Theme):</div>
+            <input type="radio" name="theme" id="rad-light" checked>
+            <label for="rad-light">Light</label>
+            <input type="radio" name="theme" id="rad-dark">
+            <label for="rad-dark">Dark</label>
+            <br><br>
 
-            <div class="group-title">Chọn màu chủ đạo (Color):</div>
-            <input type="radio" name="color" id="r-red" checked>
-            <label for="r-red">Red</label>
-            
-            <input type="radio" name="color" id="r-blue">
-            <label for="r-blue">Blue</label>
-            
-            <input type="radio" name="color" id="r-green">
-            <label for="r-green">Green</label>
+            <div class="select_nm">Chọn màu chủ đạo (Color):</div>
+            <input type="radio" name="color" id="red" checked>
+            <label for="red">Red</label>
+            <input type="radio" name="color" id="blue">
+            <label for="blue">Blue</label>
+            <input type="radio" name="color" id="green">
+            <label for="green">Green</label>
+            <br><br>
 
-            <div class="group-title">Chọn ngôn ngữ (Language):</div>
-            <input type="radio" name="lang" id="r-vi" checked>
-            <label for="r-vi">VI</label>
-            
-            <input type="radio" name="lang" id="r-en">
-            <label for="r-en">EN</label>
+            <div class="select_nm">Chọn ngôn ngữ (Language):</div>
+            <input type="radio" name="lang" id="tieng-viet" checked>
+            <label for="tieng-viet">VI</label>
+            <input type="radio" name="lang" id="english">
+            <label for="english">EN</label>
+            <br><br>
 
-            <div class="group-title">Tùy chọn bổ sung (Options - Checkbox):</div>
-            <input type="checkbox" id="c-adv">
-            <label for="c-adv">Hiển thị mô tả nâng cao</label>
-            
-            <input type="checkbox" id="c-eco">
-            <label for="c-eco">Bật chế độ Eco</label>
-            
-            <input type="checkbox" id="c-warn">
-            <label for="c-warn">Hiển thị cảnh báo quan trọng</label>
+            <div class="select_nm">Tùy chọn bổ sung (Options - Checkbox):</div>
+            <input type="checkbox" id="chk-nangcao">
+            <label for="chk-nangcao">Hiển thị mô tả nâng cao</label>
+            <input type="checkbox" id="chk-tietkiem">
+            <label for="chk-tietkiem">Bật chế độ Eco</label>
+            <input type="checkbox" id="chk-canhbao">
+            <label for="chk-canhbao">Hiển thị cảnh báo quan trọng</label>
+            <br><br>
 
-
-            <div class="results">
-                <div class="res-item d-light">Theme Light: Giao diện sáng, chữ đen.</div>
-                <div class="res-item d-dark">Theme Dark: Giao diện tối, chữ sáng.</div>
-                
-                <div class="res-item d-red">Màu Red: được nhấn mạnh khi chọn Red.</div>
-                <div class="res-item d-blue">Màu Blue: được nhấn mạnh khi chọn Blue.</div>
-                <div class="res-item d-green">Màu Green: được nhấn mạnh khi chọn Green.</div>
-                
-                <div class="res-item d-vi">[VI] Xin chào bạn! Khi chọn VI, dòng này rõ hơn.</div>
-                <div class="res-item d-en">[EN] Hello, world! Khi chọn EN, dòng này rõ hơn.</div>
-                
-                <div class="res-item d-adv">Mô tả nâng cao: giải thích kỹ hơn về cách các lựa chọn đang ảnh hưởng giao diện.</div>
-                <div class="res-item d-eco">Chế độ Eco: mô phỏng trạng thái tiết kiệm tài nguyên cho giao diện.</div>
-                <div class="res-item d-warn">Cảnh báo quan trọng: khu vực dùng để nhấn mạnh thông tin hệ thống.</div>
+            <div class="reslt">
+                <div class="displ-res res-light"><b>Theme Light:</b> Giao diện sáng, chữ đen.</div>
+                <div class="displ-res res-dark"><b>Theme Dark:</b> Giao diện tối, chữ sáng.</div>
+                <br><br>
+                <div class="displ-res res-do"><b>Màu Red:</b> được nhấn mạnh khi chọn Red.</div>
+                <div class="displ-res res-xanh"><b>Màu Blue:</b> được nhấn mạnh khi chọn Blue.</div>
+                <div class="displ-res res-xanhla"><b>Màu Green:</b> được nhấn mạnh khi chọn Green.</div>
+                <br><br>
+                <div class="displ-res res-tv"><b>[VI]</b> Xin chào bạn! Khi chọn VI, dòng này rõ hơn.</div>
+                <div class="displ-res res-ta"><b>[EN]</b> Hello, world! Khi chọn EN, dòng này rõ hơn.</div>
+                <br><br>
+                <div class="displ-res res-nangcao"><b>Mô tả nâng cao:</b> giải thích kỹ hơn về cách các lựa chọn đang ảnh hưởng giao diện.</div>
+                <div class="displ-res res-tietkiem"><b>Chế độ Eco:</b> mô phỏng trạng thái tiết kiệm tài nguyên cho giao diện.</div>
+                <div class="displ-res res-canhbao"><b>Cảnh báo quan trọng:</b> khu vực dùng để nhấn mạnh thông tin hệ thống.</div>
             </div>
             
         </div>
