@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    .layout-container {
+    display: flex;       /* Kích hoạt phép màu Flexbox, tự động xếp 2 khối nằm ngang */
+    min-height: 100vh;   /* Chiều cao tối thiểu bằng 100% màn hình */
+    }
+
+    .sidebar {
+        width: calc(25vw + 40px);
+        background-color: #f5f5f5; 
+        
+    }
+    
+
+    .preview-area {
+        width: calc(75vw - 40px);
+        min-height: calc(100vh - 40px);
+        background-color: #c0dceb; 
+        padding: 20px;
+    }
+    input[type="radio"] {
+        display: none; 
+        
+        
+    }
+    label{
+        background-color: #ddd;
+        margin: 3px ;
+        padding: 3px 5px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    :checked + label {
+        font-weight: bold;
+        
+    }
+    .skill-list span {
+        display: inline-block;
+        background-color:#f0f0f0;
+        padding: 5px 10px;
+        margin: 5px ;
+        
+    }
+    .contact-button button {
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    .title-set {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 2px;
+    }
+    /*BackGround*/
+    .layout-container:has(#light:checked) .preview-area { background-color:white; }
+    .layout-container:has(#gray:checked) .preview-area { background-color: lightgray; }
+    .layout-container:has(#yellow:checked) .preview-area { background-color:lightyellow; }
+    .layout-container:has(#blue:checked) .preview-area { background-color:lightblue; }
+    .layout-container:has(#pink:checked) .preview-area { background-color: pink; }
+    /*Size Name*/
+    .layout-container:has(#small:checked) .name { font-size: 2rem; }
+    .layout-container:has(#medium:checked) .name { font-size: 2.3rem; }
+    .layout-container:has(#large:checked) .name { font-size: 2.75rem; }
+    /*Text Style Name*/
+    .layout-container:has(#normal:checked) .name { text-transform: none; }
+    .layout-container:has(#uppercase:checked) .name { text-transform: uppercase; }
+    /*Color Name*/
+    .layout-container:has(#name-dark:checked) .name { color: black; }
+    .layout-container:has(#name-blue:checked) .name { color: blue; }
+    .layout-container:has(#name-green:checked) .name { color: green; }
+    .layout-container:has(#name-red:checked) .name { color: red; }
+    /*Text Align*/
+    .layout-container:has(#align-left:checked) .preview-area { text-align: left; }
+    .layout-container:has(#align-center:checked) .preview-area { text-align: center; }
+    .layout-container:has(#align-right:checked) .preview-area { text-align: right; }
+    /*Job Title Size*/
+    .layout-container:has(#job-small:checked) .job { font-size: 0.9rem; }
+    .layout-container:has(#job-medium:checked) .job { font-size: 1.1rem; }
+    .layout-container:has(#job-large:checked) .job { font-size: 1.3rem; }
+    /*Job Letter Spacing*/
+    .layout-container:has(#spacing-tight:checked) .job { letter-spacing: -0.03em; }
+    .layout-container:has(#spacing-normal:checked) .job { letter-spacing: 0.02em; }
+    .layout-container:has(#spacing-wide:checked) .job { letter-spacing: 0.18em; }
+    /*Description Size*/
+    .layout-container:has(#descript-small:checked) .descript { font-size: 0.9rem; }
+    .layout-container:has(#descript-medium:checked) .descript { font-size: 1.05rem; }
+    .layout-container:has(#descript-large:checked) .descript { font-size: 1.125rem; }
+    /*Description Line Height*/
+    .layout-container:has(#line-tight:checked) .descript { line-height: 1.6; }
+    .layout-container:has(#line-normal:checked) .descript { line-height: 1.8; }
+    .layout-container:has(#line-loose:checked) .descript { line-height: 2; }
+     /*Contact Button Color*/
+    .layout-container:has(#contact-dark:checked) .contact-button button { background-color: #1a1a1a; color: white; }
+    .layout-container:has(#contact-bule:checked) .contact-button button { background-color: blue; color: white; }
+    .layout-container:has(#contact-light:checked) .contact-button button { background-color: #f5f5f5; color: black; }
+
+    </style>
+    <div class="layout-container">
+        <div class="sidebar">
+            <h2>Tùy chỉnh hồ sơ</h2>
+            <div class="brg-color">
+                <p class="title-set">1. Màu nền hồ sơ</p>
+                
+                <input type="radio" name="bg-color" id="light">
+                <label for="light">Light</label>
+                <input type="radio" name="bg-color" id="gray">
+                <label for="gray">Gray</label>
+                <input type="radio" name="bg-color" id="yellow">
+                <label for="yellow">Yellow</label>
+                <input type="radio" name="bg-color" id="blue">
+                <label for="blue">Blue</label>
+                <input type="radio" name="bg-color" id="pink">
+                <label for="pink">Pink</label>
+
+            </div>
+            <div class="size-name">
+                <p class="title-set">2. Kích thước tên</p>
+                 
+                <input type="radio" name="size-name" id="small">
+                <label for="small">Small</label>
+                <input type="radio" name="size-name" id="medium">
+                <label for="medium">Medium</label>
+                <input type="radio" name="size-name" id="large">
+                <label for="large">Large</label>
+            </div>
+            <div class="name-text-style">
+                <p class="title-set">3. Kiểu chữ tên</p>
+                <input type="radio" name="name-text-style" id="normal">
+                <label for="normal">Normal</label>
+                <input type="radio" name="name-text-style" id="uppercase">
+                <label for="uppercase">Uppercase</label>
+            </div>
+            <div class="name-color">
+                <p class="title-set">4. Màu chữ tên</p>
+                <input type="radio" name="name-color" id="name-dark">
+                <label for="name-dark">Dark</label>
+                <input type="radio" name="name-color" id="name-blue">
+                <label for="name-blue">Blue</label>
+                <input type="radio" name="name-color" id="name-green">
+                <label for="name-green">Green</label>
+                <input type="radio" name="name-color" id="name-red">
+                <label for="name-red">Red</label>
+            </div>
+            <div class="text-align">
+                <p class="title-set">5. Căn lề hồ sơ</p>
+                 
+                <input type="radio" name="text-align" id="align-left">
+                <label for="align-left">Left</label>
+                <input type="radio" name="text-align" id="align-center">
+                <label for="align-center">Center</label>
+                <input type="radio" name="text-align" id="align-right">
+                <label for="align-right">Right</label>
+            </div>
+            <div class="job-title-size">
+                <p class="title-set">6. Kích thước nghề nghiệp</p>
+                 
+                <input type="radio" name="job-title-size" id="job-small">
+                <label for="job-small">Small</label>
+                <input type="radio" name="job-title-size" id="job-medium">
+                <label for="job-medium">Medium</label>
+                <input type="radio" name="job-title-size" id="job-large">
+                <label for="job-large">Large</label>
+            </div>
+            <div class="job-letter-spacing">
+                <p class="title-set">7. Khoảng cách chữ nghề nghiệp</p>
+                <input type="radio" name="job-letter-spacing" id="spacing-tight">
+                <label for="spacing-tight">Tight</label>
+                <input type="radio" name="job-letter-spacing" id="spacing-normal">
+                <label for="spacing-normal">Normal</label>
+                <input type="radio" name="job-letter-spacing" id="spacing-wide">
+                <label for="spacing-wide">Wide</label>
+
+            </div>
+            <div class="descript-size">
+                <p class="title-set">8. Kích thước mô tả</p>
+                <input type="radio" name="descript-size" id="descript-small">
+                <label for="descript-small">Small</label>
+                <input type="radio" name="descript-size" id="descript-medium">
+                <label for="descript-medium">Medium</label>
+                <input type="radio" name="descript-size" id="descript-large">
+                <label for="descript-large">Large</label>
+            </div>
+            <div class="description-line-height">
+                <p class="title-set">9. Giãn dòng mô tả</p>
+                <input type="radio" name="description-line-height" id="line-tight">
+                <label for="line-tight">Tight</label>   
+                <input type="radio" name="description-line-height" id="line-normal">
+                <label for="line-normal">Normal</label>
+                <input type="radio" name="description-line-height" id="line-loose">
+                <label for="line-loose">Loose</label>
+            </div>
+            <div class="contact-button-color">
+                <p class="title-set">10. Màu nút liên hệ</p>
+            </div>
+            <input type="radio" name="contact-button-color" id="contact-dark">
+            <label for="contact-dark">Dark</label>
+            <input type="radio" name="contact-button-color" id="contact-bule">
+            <label for="contact-bule">Blue</label>
+            <input type="radio" name="contact-button-color" id="contact-light">
+            <label for="contact-light">Light</label>
+
+        </div>
+        <div class="preview-area">
+            <h2 style="font-size: medium; text-align: left;">Preview hồ sơ cá nhân</h2>
+            <div class="name">Nguyễn Minh Khoa</div>
+            <div class="job">Frontend Developer - Ho Chi Minh City</div>
+            <div class="descript">Tôi là một lập trình viên Frontend với hơn 3 năm kinh nghiệm xây dựng giao diện web hiện đại, tập trung vào hiệu suất và trải nghiệm người dùng. Tôi yêu thích việc biến ý tưởng sáng tạo thành sản phẩm thực tế</div>
+            <div class="skill-group">
+                <div class="skill">Kỹ năng</div>
+                <div class="skill-list">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>React</span>
+                    <span>Figma</span>
+                    <span>Git</span>
+                </div>
+            </div>
+            <div class="hobby-group">
+                <div class="hobby">Sở thích</div>
+                <div class="hobby-list">
+                    <span>Nhiếp ảnh</span>
+                    <span>Đọc sách</span>
+                    <span>Du lịch</span>
+                    <span>Cà phê</span>
+                </div>
+            </div>
+            <div class="contact-button">
+                <button>Liên hệ với tôi</button>
+            </div>
+        </div>
+</body>
+</html>
