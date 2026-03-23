@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Notification - Box Model Cơ Bản</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif; /*Chọn font chữ cho bài tập*/
+            padding: 50px;
+        }
+
+        
+        #toast-toggle {
+            display: none;  /*Em dùng display: none; để ẩn input checkbox */
+        }
+
+        
+        .open-btn {
+            display: inline-block; /*Em dùng inline block để hai thẻ ngang hàng cùng nhau*/
+            background-color: #333;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;  /* Em dùng cursor: pointer; để khi rê chuột vào nút sẽ có ngón tay*/
+            
+        }
+
+    
+        .toast {
+            background-color: #66bb6a; /* Màu xanh lá */
+            color: white;
+            padding: 10px 20px;
+            margin-left: 20px; /* Em dùng margin left để nó có khoảng cách với nút bấm */
+            display: none; /* Em dùng display: none; để ẩn toast mặc định */
+        }
+
+    
+        #toast-toggle:checked ~ .toast {
+            display: inline-block; /* Em dùng display: inline-block; để hiện toast ngang hàng khi checkbox được check */
+        }
+
+        
+        .toast-text {
+            display: inline-block; /* Em dùng display: inline-block; để chữ nằm ngang hàng với nút X */
+            margin-right: 20px; /* Em dùng margin right để tạo khoảng cách giữa chữ và nút X */
+            font-size: 18px;
+        }
+
+        
+        .close-btn {
+            display: inline-block; /* Em dùng display: inline-block; để nút đóng có kích thước và nằm ngang hàng với chữ */
+            background-color: #4caf50; /* Em dùng màu xanh đậm hơn cho nút đóng */
+            color: white;
+            padding: 5px 12px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" id="toast-toggle">
+
+    <label for="toast-toggle" class="open-btn">Hiện thông báo</label>
+
+    <div class="toast">
+        <span class="toast-text">Lưu thành công!</span>
+        <label for="toast-toggle" class="close-btn">&times;</label>
+    </div>
+
+</body>
+</html>
