@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        body {
+            /* Em dùng margin: 0 và padding: 0 để reset khoảng cách mặc định của trình duyệt, giúp dễ tính toán kích thước hộp hơn */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        #modal-toggle {
+            /* Em dùng display: none để ẩn hoàn toàn input checkbox trên giao diện vì chỉ mượn trạng thái checked của nó để xử lý logic */
+            display: none;
+        }
+
+        .open-btn {
+            /* Em dùng display: block để ép thẻ label (vốn là thẻ inline) thành khối, từ đó mới set được width và height */
+            display: block;
+            width: 150px;
+            height: 50px;
+            /* Em dùng line-height bằng đúng chiều cao height để căn giữa chữ theo chiều dọc */
+            line-height: 50px; 
+            text-align: center;
+            background-color: #3b82f6;
+            color: #ffffff;
+            /* Em dùng margin: 0 để đảm bảo nút không bị đẩy lệch đi do các margin thừa */
+            margin: 0; 
+            cursor: pointer;
+        }
+
+        .overlay {
+            /* Em dùng display: none để ẩn lớp nền mờ này đi khi mới load trang web */
+            display: none; 
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Em dùng width: 100vw và height: 100vh để lớp phủ này trải rộng chiếm trọn 100% màn hình thiết bị */
+            width: 100vw;
+            height: 100vh;
+            
+            /* Em dùng margin-top: -50px (số âm) để kéo giật ngược lớp nền này lên trên, đè vừa khít lên nút .open-btn đang cao 50px */
+            margin-top: -50px; 
+            
+            /* Em dùng text-align: center ở lớp cha này để căn giữa hộp .modal (vì bên dưới .modal em đã set thành inline-block) */
+            text-align: center; 
+            
+            cursor: pointer;
+        }
+
+        /* Em dùng bộ chọn ~ kết hợp pseudo-class :checked để tạo logic: Khi checkbox được check, thẻ .overlay đi sau nó sẽ đổi thành display: block để hiện ra */
+        #modal-toggle:checked ~ .overlay {
+            display: block;
+        }
+
+        .modal {
+            background-color: #ffffff;
+            width: 400px;
+            padding: 40px; 
+            
+            /* Em dùng display: inline-block để biến hộp thành khối nội tuyến. Điều này giúp hộp nhận được lệnh text-align: center từ lớp cha, đồng thời giúp margin không bị tràn ra ngoài gây hiện tượng "sập margin" (margin collapse) */
+            display: inline-block; 
+            
+            /* Em dùng margin-top: 150px để tự đẩy hộp này cách xa mép trên của màn hình 150px, giúp hộp nằm ở vị trí vừa mắt mà không cần dùng padding ở lớp cha */
+            margin-top: 150px;     
+            
+            text-align: center;
+            /* Em dùng cursor: default để khi rê chuột vào vùng trắng của hộp thông báo, con trỏ chuột trở lại bình thường (mũi tên), không bị biến thành hình bàn tay của lớp overlay phía sau */
+            cursor: default; 
+        }
+
+        .modal p {
+            color: #333333;
+            font-size: 20px;
+            /* Em dùng margin-top: 0 để xóa khoảng cách dư thừa mặc định của thẻ p, giúp chữ sát với mép trên (chỉ cách đúng khoảng padding 40px của .modal) */
+            margin-top: 0;
+            /* Em dùng margin-bottom: 30px để tạo một khoảng hở ngăn cách giữa đoạn chữ và nút Đóng bên dưới */
+            margin-bottom: 30px;
+        }
+
+        .close-btn {
+            background-color: #ef4444;
+            color: #ffffff;
+            /* Em dùng padding để nới rộng vùng màu đỏ của nút, 10px cho trên/dưới và 30px cho trái/phải */
+            padding: 10px 30px;
+            /* Em dùng display: inline-block để hộp ôm vừa đủ chữ "Đóng" bên trong và nhận đầy đủ các thuộc tính padding/margin mà thẻ inline bình thường không làm tốt */
+            display: inline-block;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" id="modal-toggle">
+
+    <label for="modal-toggle" class="open-btn">Mở modal</label>
+
+    <label for="modal-toggle" class="overlay">
+        <div class="modal">
+            <p>Đây là nội dung thông báo!</p>
+            <div class="close-btn">Đóng</div>
+        </div>
+    </label>
+
+</body>
+</html>
