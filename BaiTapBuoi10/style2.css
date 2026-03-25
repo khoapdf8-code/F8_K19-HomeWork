@@ -1,0 +1,259 @@
+
+:root {
+    font-size: 16px; /* 1rem = 16px */
+}
+
+* {
+    margin: 0;    /* Reset margin và padding để dễ tính toán kích thước */
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #a855f7 0%, #c084fc 100%);
+    color: #1e293b;
+    line-height: 1.5;
+}
+
+
+.page-content {
+    text-align: center;
+    /* Dùng padding-top để đẩy nội dung xuống giữa màn hình*/
+    padding-top: 50vh; 
+}
+
+.btn-open-modal {
+    display: inline-block;
+    background-color: #f05123; 
+    color: #ffffff;
+    font-size: 1.125rem; /* 18px */
+    font-weight: bold;
+    padding: 0.75rem 2rem; /* 12px 32px */
+    border-radius: 0.3125rem; /* 5px */
+    cursor: pointer;
+}
+
+.btn-open-modal:hover {
+    background-color: #d8431c; 
+}
+
+
+.modal-toggle-checkbox {
+    display: none;
+}
+
+
+.overlay {
+    /*Mặc định ẩn, dùng display:none để không chiếm chỗ và không hiển thị */
+    display: none; 
+    position: fixed; /* Dùng fixed để overlay luôn phủ toàn màn hình dù có scroll */
+    top: 0;
+    left: 0;
+    width: 100vw; /* full màn hình*/
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Nền overlay tối */
+    z-index: 1000; /* Nổi trên nội dung trang nhưng dưới modal */
+}
+
+/* Logic bật Modal */
+.modal-toggle-checkbox:checked ~ .overlay {
+    display: block;
+}
+
+/* Lớp div để click đóng ngoài Modal */
+.close-overlay {
+    display: block; /* Cho phép click vào vùng này để đóng modal */
+    position: absolute; /* Đặt tuyệt đối để phủ toàn bộ vùng overlay */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;  /* full màn hình*/
+    cursor: pointer;
+}
+
+/* Hộp Modal */
+.modal-box {
+    position: absolute; /* Dùng absolute để dễ dàng căn giữa bằng top/left + margin âm */
+    top: 50%;
+    left: 50%;
+    /* Căn giữa bằng margin âm  */
+    width: 31.25rem; /* 500px */
+    height: 37.5rem; /* 600px */
+    margin-top: -18.75rem; /* -300px */
+    margin-left: -15.625rem; /* -250px */
+    
+    background-color: #ffffff;
+    border-radius: 0.5rem; /* 8px */
+    padding: 2rem; /* 32px */
+    z-index: 1001; /* Nổi trên vùng close-overlay */
+    
+}
+
+/* Nút X góc trên phải */
+.btn-close-x {
+    position: absolute; /* Dùng absolute để đặt nó ở góc trên phải của modal */
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.25rem;
+    color: #64748b;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-close-x:hover {
+    color: #ef4444;
+}
+
+
+.modal-title {
+    font-size: 1.5rem; /* 24px */
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.modal-desc {
+    font-size: 0.875rem; /* 14px */
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* =========================================
+   4. FORM ELEMENTS
+========================================= */
+.form-group {
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem; /* 14px */
+    color: #334155;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.required {
+    color: #ef4444;
+}
+
+/* Khung chứa input để neo tooltip */
+.input-wrapper {
+    position: relative;  /* Dùng position: relative để tạo ngữ cảnh cho tooltip có position: absolute */
+    display: block;
+}
+
+.form-input {
+    width: 100vw; /*Dùng 100vw để chiếm toàn bộ chiều rộng của modal, sau đó sẽ giới hạn lại bằng padding của modal */
+}
+
+.form-input {
+    display: block;
+    width: 27.25rem; /* 500px (tổng) - 64px (padding 2 bên của modal) = 436px = 27.25rem */
+    padding: 0.75rem; /* 12px */
+    font-size: 0.875rem;
+    background-color: #f8fafc;
+    border: 0.0625rem solid #e2e8f0; /* 1px */
+    border-radius: 0.25rem; /* 4px */
+    color: #1e293b;
+}
+
+.form-input:focus {
+    border-color: #c084fc;
+}
+
+/* Checkbox */
+.checkbox-wrapper {
+    margin-bottom: 0.5rem;
+}
+
+.checkbox-item {
+    position: relative; /* Neo tooltip cho checkbox */
+    display: inline-block;
+    cursor: pointer;
+}
+
+.form-checkbox {
+    /* Đưa checkbox thẳng hàng với chữ */
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.checkbox-label {
+    font-size: 0.875rem;
+    color: #334155;
+    vertical-align: middle;
+}
+
+/* Nút Submit */
+.btn-submit {
+    display: block;
+    width: 27.25rem; /* Chiều rộng tính bằng rem giống input */
+    background-color: #a855f7;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.875rem 0; /* 14px */
+    border: none;
+    border-radius: 0.25rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #9333ea;
+}
+
+
+.tooltip-text {
+    /* Mặc định ẩn, dùng opacity = 0 */
+    visibility: hidden;
+    opacity: 0;
+    
+    
+    position: absolute; /* Dùng absolute để định vị tooltip so với phần tử cha có position: relative */
+    bottom: 3rem; /* Đẩy lên trên input (chỉnh số rem cho phù hợp độ cao) */
+    left: 0; /* Căn trái theo yêu cầu */
+    
+    background-color: #1e293b;
+    color: #ffffff;
+    font-size: 0.75rem; /* 12px */
+    padding: 0.5rem 0.75rem; /* 8px 12px */
+    border-radius: 0.25rem;
+    white-space: normal; /* Cho phép xuống dòng */
+    width: 18.75rem; /* 300px (Giới hạn độ rộng để chữ xuống dòng đẹp) */
+    z-index: 10; /* Đảm bảo tooltip hiển thị trên các phần tử khác */
+}
+
+/* Mũi tên chỉ xuống (Border Trick) */
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Đẩy xuống dưới đáy hộp tooltip */
+    left: 1.25rem; /* Canh lề trái cho mũi tên */
+    /* Border Trick tạo hình tam giác */
+    border-width: 0.3125rem; /* 5px */
+    border-style: solid;
+    border-color: #1e293b transparent transparent transparent;
+}
+
+/* Hover Input -> Hiện Tooltip */
+.form-input:hover + .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Tooltip cho Checkbox */
+.tooltip-checkbox {
+    bottom: 1.5rem; 
+    left: 0;
+    width: 15.625rem; /* 250px */
+}
+
+/* Hover Checkbox  */
+.checkbox-item:hover .tooltip-checkbox {
+    visibility: visible;
+    opacity: 1;
+}
