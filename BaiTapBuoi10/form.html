@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tư Vấn</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="page-content">
+        <label for="modal-toggle" class="btn-open-modal">Tư vấn ngay</label>
+    </div>
+
+    <input type="checkbox" id="modal-toggle" class="modal-toggle-checkbox">
+
+    <div class="overlay">
+        <label for="modal-toggle" class="close-overlay"></label>
+
+        <div class="modal-box">
+            <label for="modal-toggle" class="btn-close-x">X</label>
+
+            <h2 class="modal-title">Đăng Ký Tư Vấn</h2>
+            <p class="modal-desc">Vui lòng điền thông tin bên dưới, chúng tôi sẽ liên hệ lại sớm nhất.</p>
+
+            <form action="https://api-gateway.fullstack.edu.vn/action_page.php" method="POST">
+                
+                <div class="form-group">
+                    <label class="form-label">Họ và tên <span class="required">*</span></label>
+                    <div class="input-wrapper">
+                        <input type="text" class="form-input" placeholder="Nguyễn Văn A" required>
+                        <span class="tooltip-text">Nhập họ và tên đầy đủ của bạn</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Số điện thoại <span class="required">*</span></label>
+                    <div class="input-wrapper">
+                        <input type="tel" class="form-input" placeholder="0912345678" required>
+                        <span class="tooltip-text">Số điện thoại để chúng tôi liên hệ tư vấn</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <div class="input-wrapper">
+                        <input type="email" class="form-input" placeholder="example@gmail.com">
+                        <span class="tooltip-text">Email nhận thông tin khóa học (không bắt buộc)</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Khóa học quan tâm <span class="required">*</span></label>
+                    
+                    <div class="checkbox-wrapper">
+                        <label class="checkbox-item">
+                            <input type="checkbox" class="form-checkbox">
+                            <span class="checkbox-label">HTML & CSS</span>
+                            <span class="tooltip-text tooltip-checkbox">Khóa nền tảng xây dựng giao diện web</span>
+                        </label>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                        <label class="checkbox-item">
+                            <input type="checkbox" class="form-checkbox">
+                            <span class="checkbox-label">JavaScript</span>
+                            <span class="tooltip-text tooltip-checkbox">Ngôn ngữ lập trình cho web động</span>
+                        </label>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                        <label class="checkbox-item">
+                            <input type="checkbox" class="form-checkbox">
+                            <span class="checkbox-label">ReactJS</span>
+                            <span class="tooltip-text tooltip-checkbox">Thư viện JavaScript phổ biến nhất hiện nay</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">ĐĂNG KÝ TƯ VẤN NGAY</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
