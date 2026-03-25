@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*  Em dùng box-sizing để padding/border không làm phình to kích thước hộp */
+}
+body{
+    font-family: Arial, sans-serif;
+    
+    font-size: 1rem;
+}
+ul{
+    list-style: none; /* Em dùng list-style để loại bỏ dấu chấm đầu dòng của danh sách */
+}
+a{
+    text-decoration: none; /* Em dùng text-decoration để loại bỏ gạch chân của liên kết */
+    
+}
+.main-header{
+    background-color: #ffffff;
+    border-bottom: 0.0625rem solid #dddddd; /* Em dùng border-bottom để tạo đường viền dưới cho header */
+}
+.header-inner{
+    max-width: 75rem;
+    margin: 0 auto; /* Em dùng margin: 0 auto để căn giữa phần tử */
+    padding: 0.5rem 0;
+}
+.logo-img{
+    width: 2.375rem;
+    height: auto; /* Em dùng height: auto để giữ tỷ lệ của hình ảnh khi thay đổi kích thước */
+    display: block; /* Em dùng display: block để loại bỏ khoảng trắng dưới hình ảnh */
+}
+.main-nav{
+    display: inline-block;  /* Em dùng display: inline-block để cho phép phần tử nằm ngang và có thể áp dụng padding/margin */
+    vertical-align: middle; /* Em dùng vertical-align để căn giữa phần tử theo chiều dọc */
+}
+.menu-level-1{
+    font-size: 0; /* Em dùng font-size: 0 để loại bỏ khoảng cách giữa các phần tử inline-block */
+}
+.item-level-1{
+    display: inline-block; /* Em dùng display: inline-block để cho phép phần tử nằm ngang và có thể áp dụng padding/margin */
+    vertical-align: middle; /* Em dùng vertical-align để căn giữa phần tử theo chiều dọc */
+    margin-right: 1.5625rem;
+    font-size: 1rem;
+    position: relative; /* Em dùng position: relative để tạo ngữ cảnh cho phần tử con có position: absolute */
+}
+.item-level-1:last-child{
+    margin-right: 0; /* Em dùng :last-child để loại bỏ margin phải của phần tử cuối cùng */
+}
+.link-level-1{
+    display: block; /* Em dùng display: block để phần tử chiếm toàn bộ chiều rộng của phần tử cha */
+    color: #333333;
+    font-weight: bold;
+    padding: 0.375rem 0;
+    border-bottom: 0.125rem solid transparent; /* Em dùng border-bottom để tạo đường viền dưới cho liên kết, ban đầu là trong suốt */
+    
+}
+.item-level-1:hover > .link-level-1 {
+    color: #d62828;
+    border-bottom: 0.125rem solid #d62828;
+}
+
+
+.menu-level-2 {
+    display: none;
+    position: absolute; /* Em dùng position: absolute để phần tử con được định vị tuyệt đối so với phần tử cha có position: relative */
+    top: 100%; /* Em dùng top: 100% để đặt phần tử con ngay dưới phần tử cha */
+    left: 0;
+    background-color: #ffffff;
+    border: 0.0625rem solid #dddddd; /* Em dùng border để tạo đường viền cho menu con */
+    min-width: 12.5rem; /* Em dùng min-width để đảm bảo menu con có độ rộng tối thiểu */
+    z-index: 100; /* Em dùng z-index để đảm bảo menu con hiển thị trên các phần tử khác */
+}
+.item-level-1:hover > .menu-level-2 { 
+    display: block;
+}
+.item-level-2 {
+    display: block; /* Ép các thẻ li cấp 2 thành khối dọc (trên xuống) */
+    
+    /* Em đặt position: relative ở đây để tạo mốc tọa độ mới. Lát nữa dropdown cấp 2 sẽ lấy thẻ này làm gốc để bung sang ngang */
+    position: relative; 
+}
+.link-level-2 {
+    display: block;
+    color: #333333;
+    padding: 0.375rem 0.625rem;
+    font-size: 1rem;
+    font-weight: normal;
+
+}
+.menu-level-3 {
+    display: none;
+    position: absolute;
+    
+    /* Em dùng top: 0 để menu nằm ngang hàng với mục cha, và left: 100% để nó nảy hẳn sang lề bên phải của hộp menu cấp 1 */
+    top: 0;
+    left: 100%;
+    
+    background-color: #ffffff;
+    border: 0.0625rem solid #dddddd;
+    min-width: 12.5rem;
+}
+
+/* Hover vào mục cấp 2 thì hiện menu cấp 3 */
+.item-level-2:hover > .menu-level-3 {
+    display: block;
+}
+.item-level-2:hover > .link-level-2{
+    color: #d62828;
+}
+.link-level-3 {
+    display: block;
+    color: #333333;
+    padding: 0.375rem 0.625rem;
+    font-size: 1rem;
+    font-weight: normal;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.item-level-3:hover > .link-level-3{
+    color:#d62828;
+}
+.has-icon-down::after {
+    /* Em dùng thuộc tính content để tự chèn ký tự vào bằng CSS mà không cần viết vào HTML */
+    content: '▾';
+    /* 10px = 0.625rem */
+    font-size: 0.625rem; 
+    color: #555555;
+    /* 15px = 0.9375rem khoảng cách bên phải như thiết kế */
+    margin-left: 0.9375rem; 
+    vertical-align: middle;
+}
+
+.has-icon-right::after {
+    content: '▸';
+    font-size: 0.625rem;
+    color: #777777;
+    
+    /* Em dùng float: right để đẩy icon mũi tên dạt hết cỡ về mép phải của hộp menu 200px, giúp tất cả các mũi tên được thẳng hàng nhau */
+    float: right; 
+    margin-top: 0.125rem; /* Căn chỉnh nhẹ để mũi tên nằm giữa dòng chữ */
+}
