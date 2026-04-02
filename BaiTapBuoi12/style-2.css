@@ -1,0 +1,257 @@
+/* ================= CÀI ĐẶT CHUNG ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.property-exclusives {
+    background-color: #f8f9fa;
+    padding: 60px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.section-header p {
+    font-size: 15px;
+    color: #7f8c8d;
+}
+
+/* ================= GRID & THẺ CARD ================= */
+.property-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.property-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    width: calc((100% - 50px) / 3);
+    overflow: hidden; /* Cắt góc ảnh bị lòi ra khỏi viền bo */
+    transition: all 0.3s ease;
+}
+
+.property-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px); 
+}
+
+/* ================= KHỐI HÌNH ẢNH (THUMBNAIL) ================= */
+.card-thumbnail {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* ================= CÁC NHÃN (BADGES) ================= */
+.badge-group {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+}
+
+.badge-group-bottom {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+}
+
+.top-left { top: 15px; left: 15px; }
+.top-right { top: 15px; right: 15px; }
+.bottom-left { bottom: 15px; left: 15px; }
+.bottom-right { bottom: 15px; right: 15px; }
+
+.badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.status-sale { background-color: #e74c3c; }
+.status-rent { background-color: #e67e22; }
+
+.type-house {
+    background-color: #34495e;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+    position: absolute;
+}
+
+.price {
+    position: absolute;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background-color: #16a085;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.price:hover {
+    box-shadow: 0 4px 12px rgba(22, 160, 133, 0.4);
+}
+
+/* === Cục Icon Tia Sét (Flash) === */
+.badge.icon-bolt {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #2c3e50;
+    padding: 0; /* Xóa padding mặc định của thẻ badge */
+}
+
+.badge.icon-bolt .mdi-flash {
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* ================= NÚT SHARE VÀ HEART ================= */
+.action-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.action-btn .mdi {
+    font-size: 18px;
+    margin: 0;
+}
+
+.favorite-btn .mdi { color: #e74c3c; }
+.share-btn .mdi { color: #7f8c8d; }
+
+/* Hover hiệu ứng cho các nút */
+.favorite-btn:hover {
+    background-color: #e74c3c;
+}
+.favorite-btn:hover .mdi {
+    color: #ffffff;
+}
+/* Biến icon trái tim từ viền thành đặc (solid) khi hover */
+.favorite-btn:hover .mdi-heart-outline::before {
+    content: "\F02D1";
+}
+
+.share-btn:hover {
+    background-color: #3498db;
+}
+.share-btn:hover .mdi {
+    color: #ffffff;
+}
+
+
+/* ================= KHỐI NỘI DUNG (CONTENT) ================= */
+.card-content {
+    padding: 18px; /* Đã chuẩn hóa thành 18px theo yêu cầu */
+}
+
+/* Căn chỉnh chung cho các icon MDI trong nội dung */
+.card-content .mdi {
+    font-size: 16px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.location {
+    font-size: 12px;
+    color: #95a5a6;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 10px 0;
+}
+
+/* Thông tin người đăng (Meta Info) */
+.meta-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.agency, .date {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+/* Chỉnh riêng icon Avatar to hơn một chút */
+.mdi-account {
+    font-size: 24px !important;
+    color: #bdc3c7 !important;
+    margin-right: 8px !important;
+}
+
+.date .mdi {
+    color: #95a5a6;
+}
+
+/* Ẩn thẻ hr vì dùng border-top sẽ đẹp hơn */
+hr.divider {
+    display: none; 
+}
+
+/* Các thông số chi tiết (Specs) */
+.specs {
+    border-top: 1px solid #ecf0f1;
+    padding-top: 15px;
+    color: #7f8c8d;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+}
+
+.specs .mdi {
+    font-size: 16px;
+    color: #95a5a6;
+}
