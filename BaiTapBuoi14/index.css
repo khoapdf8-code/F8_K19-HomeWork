@@ -1,0 +1,263 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e4e4e4;
+    font-size: 1.6rem;
+}
+html{
+    font-size: 62.5%;
+}
+
+/* Overlay mặc định (Đóng) */
+.menu-overlay {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 998; /* Dưới cùng */
+    cursor: pointer;
+    transition-property: opacity, visibility;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    
+}
+
+/* Sidebar Navigation (Off-canvas) mặc định (Đóng) */
+.nav-sidebar {
+    position: fixed;
+    top: 0; right: -500px; /* Ẩn bên ngoài */
+    width: 300px; height: 100vh;
+    background: #3a3a3a;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Bằng với hamburger */
+    padding: 2rem;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* KHI CHECKBOX ĐƯỢC CHECK (MỞ MENU) */
+.menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-checkbox:checked ~ .nav-sidebar {
+    right: 0; /* Trượt vào */
+}
+
+.nav-sidebar__header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-sidebar__close {
+    cursor: pointer;
+}
+
+.nav-sidebar__close .mdi {
+    font-size: 28px;
+    color: white;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Icon xoay 90 độ khi hover */
+.nav-sidebar__close:hover .mdi {
+    transform: rotate(90deg);
+}
+
+.nav-sidebar__list {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.nav-sidebar__item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-sidebar__link {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d262c;
+    padding: 1rem 2rem; /* Spacing Desktop */
+    position: relative;
+}
+
+.header__logo {
+    position: relative;
+    z-index: 1001; /* Trên cùng */
+}
+
+.header__logo h2 {
+    color: #fff;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.header__hamburger {
+    display: none; /* Ẩn trên Desktop */
+    position: relative;
+    z-index: 999; /* Dưới overlay nhưng trên sidebar */
+}
+
+.hamburger-label {
+    cursor: pointer;
+}
+
+.hamburger-label .mdi {
+    font-size: 28px;
+    color: white;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #fff;
+}
+.nav__link:hover {
+    border-bottom: #e4e4e4 2px solid;
+}
+.nav-sidebar__link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.container {
+    padding: 1.5rem; /* Desktop Container Padding */
+    display: flex;
+    gap: 1.5rem; /* Desktop Gap content và sidebar */
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container__content {
+    flex: 1;
+}
+
+.main-heading {
+    font-size: 2rem; /* Typography Desktop */
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.container__sidebar {
+    width: 300px;
+    background-color: #333;
+    min-height: 400px;
+}
+
+.sidebar__box {
+    padding: 1.5rem;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1rem; /* Cards gap */
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: #fff;
+    border: 2px solid #333;
+    
+    width: calc((100% - 3rem) / 3);
+}
+
+.card__header {
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+.card__title {
+    font-size: 1.25rem; /* Typography Card Header */
+    font-weight: 600;
+}
+
+.card__body {
+    padding: 1rem;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+    
+    .container {
+        padding: 1rem;
+     
+    }
+
+    .container__sidebar {
+        width: 250px;
+    }
+
+    /* Đổi sang Hamburger menu */
+    .header__nav {
+        display: none; /* Ẩn menu ngang */
+    }
+    .header__hamburger {
+        display: block; /* Hiện nút Hamburger */
+    }
+
+  
+    .card {
+        width: calc((100% - 2rem) / 2);
+    }
+    
+    .main-heading {
+        font-size: 1.5rem; /* Typography Mobile/Tablet */
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    /* Điều chỉnh Sidebar Off-canvas cho Mobile */
+    .nav-sidebar {
+        width: 280px;
+        right: -500px;
+        padding: 2rem 1.5rem;
+    }
+    
+    /* Layout Cards: 1 cột */
+    .card {
+        width: 100%;
+    }
+    .container {
+        flex-direction: column;
+        max-width: 100%;
+        padding: 1rem;
+    }
+    .container__sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+}
