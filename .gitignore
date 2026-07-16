@@ -1,0 +1,16 @@
+# Dependency directories
+node_modules/
+**/node_modules/
+
+# IDE and System files
+.gemini/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build outputs and temp files
+dist/
+build/
+*.log
+tempCodeRunnerFile.js
