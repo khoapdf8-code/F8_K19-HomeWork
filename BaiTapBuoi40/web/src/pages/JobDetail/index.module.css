@@ -1,0 +1,58 @@
+.page { max-width: var(--container-max); margin: 20px auto; padding: 0 var(--container-padding); }
+.breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; display: flex; gap: 6px; flex-wrap: wrap; }
+.breadcrumb a { color: var(--text-secondary); }
+.breadcrumb a:hover { color: var(--primary); }
+.breadcrumb span { color: var(--text-muted); }
+
+.layout { display: grid; grid-template-columns: 1fr 340px; gap: 20px; align-items: start; }
+
+/* Main */
+.main { display: flex; flex-direction: column; gap: 16px; }
+.card { background: var(--bg-white); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-card); }
+
+.jobTitle { font-size: 22px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+.verifiedBadge { color: var(--primary); }
+
+.salary { font-size: 18px; font-weight: 700; color: var(--salary-color); margin-bottom: 16px; }
+
+.infoRow { display: flex; gap: 32px; margin-bottom: 16px; flex-wrap: wrap; }
+.infoItem { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-secondary); }
+.infoItem strong { color: var(--text-primary); font-weight: 500; }
+.infoIcon { color: var(--primary); }
+
+.actions { display: flex; gap: 12px; margin-top: 8px; }
+.applyBtn { flex: 1; padding: 14px; font-size: 16px; font-weight: 700; color: white; background: var(--primary); border: none; border-radius: var(--radius-md); cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: background var(--transition); }
+.applyBtn:hover { background: var(--primary-dark); }
+.saveBtn { padding: 14px 24px; font-size: 14px; font-weight: 600; color: var(--primary); background: var(--bg-white); border: 1.5px solid var(--primary); border-radius: var(--radius-md); cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all var(--transition); }
+.saveBtn:hover { background: var(--primary-light); }
+
+.sectionTitle { font-size: 18px; font-weight: 700; color: var(--text-primary); padding-left: 12px; border-left: 4px solid var(--primary); margin-bottom: 16px; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.tag { padding: 6px 14px; font-size: 13px; background: var(--bg-main); border-radius: var(--radius-md); color: var(--text-secondary); }
+
+.htmlContent { font-size: 14px; line-height: 1.8; color: var(--text-primary); }
+.htmlContent h3 { font-size: 16px; font-weight: 600; margin: 16px 0 8px; }
+.htmlContent ul { padding-left: 20px; }
+.htmlContent li { margin-bottom: 6px; list-style: disc; }
+
+/* Sidebar */
+.sidebar { display: flex; flex-direction: column; gap: 16px; position: sticky; top: 80px; }
+
+.companyCard { background: var(--bg-white); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-card); text-align: center; }
+.companyLogo { width: 72px; height: 72px; border-radius: var(--radius-md); border: 1px solid var(--border-light); object-fit: contain; margin: 0 auto 12px; background: #fff; padding: 4px; }
+.companyName { font-size: 15px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px; }
+.companyInfo { text-align: left; }
+.companyInfoItem { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; font-size: 13px; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); }
+.companyInfoItem:last-child { border-bottom: none; }
+.companyInfoLabel { min-width: 70px; color: var(--text-muted); }
+.companyInfoValue { color: var(--text-primary); font-weight: 500; }
+.viewCompanyBtn { display: block; width: 100%; padding: 10px; margin-top: 16px; font-size: 14px; font-weight: 600; color: var(--primary); background: var(--bg-white); border: 1.5px solid var(--primary); border-radius: var(--radius-md); cursor: pointer; text-align: center; transition: all var(--transition); text-decoration: none; }
+.viewCompanyBtn:hover { background: var(--primary-light); }
+
+.generalInfo { background: var(--bg-white); border-radius: var(--radius-lg); padding: 24px; box-shadow: var(--shadow-card); }
+.generalTitle { font-size: 16px; font-weight: 700; color: var(--text-primary); margin-bottom: 16px; }
+.generalItem { display: flex; align-items: center; gap: 12px; padding: 10px 0; font-size: 13px; border-bottom: 1px solid var(--border-light); }
+.generalItem:last-child { border-bottom: none; }
+.generalLabel { color: var(--text-muted); font-size: 12px; }
+.generalValue { font-weight: 500; color: var(--text-primary); }

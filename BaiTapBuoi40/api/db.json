@@ -1,0 +1,354 @@
+{
+  "users": [
+    {
+      "id": "user-001",
+      "email": "employer@topcv.vn",
+      "password": "123456",
+      "full_name": "Thái Trí Hùng",
+      "role": "employer",
+      "company_id": "comp-001",
+      "avatar": "",
+      "phone": "02466805588"
+    },
+    {
+      "id": "user-002",
+      "email": "candidate@gmail.com",
+      "password": "123456",
+      "full_name": "Trần Thị Bích",
+      "role": "candidate",
+      "avatar": "",
+      "phone": "0901234567"
+    },
+    {
+      "id": "user-003",
+      "email": "admin@topcv.vn",
+      "password": "admin123",
+      "full_name": "Admin TopCV",
+      "role": "admin",
+      "avatar": "",
+      "phone": ""
+    },
+    {
+      "id": "user-004",
+      "email": "hr@globallogistics.io",
+      "password": "123456",
+      "full_name": "Nguyễn Văn An",
+      "role": "employer",
+      "company_id": "comp-002",
+      "avatar": "",
+      "phone": "0909123456"
+    }
+  ],
+  "category_groups": [
+    {
+      "id": "group-1",
+      "group_name": "Kinh doanh / Bán hàng",
+      "group_slug": "kinh-doanh-ban-hang",
+      "icon": "TrendingUp",
+      "categories": [
+        { "id": "cat-1-1", "name": "Sales Xuất nhập khẩu/Logistics", "slug": "sales-xuat-nhap-khau-logistics" },
+        { "id": "cat-1-2", "name": "Sales Bất động sản", "slug": "sales-bat-dong-san" },
+        { "id": "cat-1-3", "name": "Sales Xây dựng", "slug": "sales-xay-dung" }
+      ]
+    },
+    {
+      "id": "group-2",
+      "group_name": "Marketing / PR / Quảng cáo",
+      "group_slug": "marketing-pr-quang-cao",
+      "icon": "Campaign",
+      "categories": [
+        { "id": "cat-2-1", "name": "Digital Marketing", "slug": "digital-marketing" },
+        { "id": "cat-2-2", "name": "Branding & Communications", "slug": "branding-communications" }
+      ]
+    },
+    {
+      "id": "group-3",
+      "group_name": "Chăm sóc khách hàng / Vận hành",
+      "group_slug": "cham-soc-khach-hang-van-hanh",
+      "icon": "SupportAgent",
+      "categories": [
+        { "id": "cat-3-1", "name": "Tư vấn & Chăm sóc khách hàng", "slug": "tu-van-cham-soc-khach-hang" }
+      ]
+    },
+    {
+      "id": "group-4",
+      "group_name": "Nhân sự / Hành chính / Pháp chế",
+      "group_slug": "nhan-su-hanh-chinh-phap-che",
+      "icon": "People",
+      "categories": [
+        { "id": "cat-4-1", "name": "Nhân sự & Tuyển dụng", "slug": "nhan-su-tuyen-dung" }
+      ]
+    },
+    {
+      "id": "group-5",
+      "group_name": "Công nghệ Thông tin",
+      "group_slug": "cong-nghe-thong-tin",
+      "icon": "Code",
+      "categories": [
+        { "id": "cat-5-1", "name": "Lập trình phần mềm", "slug": "lap-trinh-phan-mem" },
+        { "id": "cat-5-2", "name": "Kiểm thử phần mềm", "slug": "kiem-thu-phan-mem" },
+        { "id": "cat-5-3", "name": "Quản trị hệ thống", "slug": "quan-tri-he-thong" }
+      ]
+    },
+    {
+      "id": "group-6",
+      "group_name": "Lao động phổ thông",
+      "group_slug": "lao-dong-pho-thong",
+      "icon": "Construction",
+      "categories": []
+    }
+  ],
+  "companies": [
+    {
+      "id": "comp-001",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0108888888",
+      "company_name": "CÔNG TY CỔ PHẦN CÔNG NGHỆ TOPCV VIỆT NAM",
+      "international_name": "TOPCV VIETNAM TECHNOLOGY JOINT STOCK COMPANY",
+      "short_name": "TOPCV VIETNAM",
+      "director": "Thái Trí Hùng",
+      "headquarters_address": "Tầng 3, Tòa nhà FS - GoldSeason, 47 Nguyễn Tuân, Thanh Xuân, Hà Nội",
+      "issued_date": "2019-03-15",
+      "email": "contact@topcv.vn",
+      "phone_number": "02466805588",
+      "website": "https://www.topcv.vn",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/200x/https://static.topcv.vn/company_logos/cong-ty-co-phan-cong-nghe-topcv-viet-nam-6442526776f43.jpg",
+      "cover_url": "",
+      "company_size": "500-1000 nhân viên",
+      "category": "Công nghệ Thông tin",
+      "address_list": [
+        { "city_id": 1, "city_name": "Hà Nội", "address_detail": "Tầng 3, Tòa FS GoldSeason, 47 Nguyễn Tuân, Thanh Xuân" },
+        { "city_id": 2, "city_name": "TP. Hồ Chí Minh", "address_detail": "Tầng 8, Hà Đô Airport Building, 2 Hồng Hà, Tân Bình" }
+      ],
+      "description_html": "<div><h3>Về TopCV Việt Nam</h3><p>TopCV là công ty công nghệ hàng đầu trong lĩnh vực HR Tech tại Việt Nam, cung cấp giải pháp tuyển dụng và kết nối cơ hội việc làm cho hàng triệu ứng viên.</p><h4>Môi trường làm việc</h4><ul><li>Môi trường trẻ trung, năng động, khuyến khích sáng tạo.</li><li>Chế độ đãi ngộ hấp dẫn, thưởng performance theo quý.</li><li>Chương trình đào tạo và phát triển lộ trình thăng tiến rõ ràng.</li></ul></div>"
+    },
+    {
+      "id": "comp-002",
+      "status": "PENDING",
+      "verification_tier": "UNVERIFIED",
+      "tax_code": "0316789012",
+      "company_name": "CÔNG TY TNHH GIẢI PHÁP PHẦN MỀM GLOBAL LOGISTICS",
+      "international_name": "GLOBAL LOGISTICS SOFTWARE SOLUTIONS COMPANY LIMITED",
+      "short_name": "GL SOLUTIONS",
+      "director": "Nguyễn Văn An",
+      "headquarters_address": "Số 120 Đường Cộng Hòa, Phường 4, Quận Tân Bình, TP.HCM",
+      "issued_date": "2021-06-20",
+      "email": "hr@globallogistics.io",
+      "phone_number": "0909123456",
+      "website": "https://globallogistics.io",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/200x/https://static.topcv.vn/company_logos/default-logo.png",
+      "cover_url": "",
+      "company_size": "100-499 nhân viên",
+      "category": "Sales Xuất nhập khẩu/Logistics",
+      "address_list": [
+        { "city_id": 2, "city_name": "TP. Hồ Chí Minh", "address_detail": "Số 120 Đường Cộng Hòa, Phường 4, Quận Tân Bình" }
+      ],
+      "description_html": "<div><h3>Giới thiệu về Global Logistics Solutions</h3><p>Chuyên cung cấp các giải pháp công nghệ chuyển đổi số cho chuỗi cung ứng và vận tải đa phương thức quốc tế.</p></div>"
+    },
+    {
+      "id": "comp-003",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0301234567",
+      "company_name": "CÔNG TY CỔ PHẦN FPT",
+      "international_name": "FPT CORPORATION",
+      "short_name": "FPT",
+      "director": "Nguyễn Văn Khoa",
+      "headquarters_address": "Tòa nhà FPT, 17 Duy Tân, Cầu Giấy, Hà Nội",
+      "issued_date": "2002-01-15",
+      "email": "hr@fpt.com.vn",
+      "phone_number": "024 7300 6789",
+      "website": "https://fpt.com.vn",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/200x/https://static.topcv.vn/company_logos/fpt-corporation.jpg",
+      "cover_url": "",
+      "company_size": "5000+ nhân viên",
+      "category": "Công nghệ Thông tin",
+      "address_list": [
+        { "city_id": 1, "city_name": "Hà Nội", "address_detail": "Tòa nhà FPT, 17 Duy Tân, Cầu Giấy" },
+        { "city_id": 2, "city_name": "TP. Hồ Chí Minh", "address_detail": "Tòa nhà FPT Tân Thuận, Quận 7" },
+        { "city_id": 3, "city_name": "Đà Nẵng", "address_detail": "FPT Complex, Hải Châu" }
+      ],
+      "description_html": "<div><h3>Về FPT Corporation</h3><p>Tập đoàn FPT là tổ chức công nghệ hàng đầu tại Việt Nam với hơn 70.000 nhân viên trên toàn cầu.</p></div>"
+    },
+    {
+      "id": "comp-004",
+      "status": "APPROVED",
+      "verification_tier": "VERIFIED",
+      "tax_code": "0305678901",
+      "company_name": "CÔNG TY CỔ PHẦN VÀNG BẠC ĐÁ QUÝ PHÚ NHUẬN",
+      "international_name": "PHU NHUAN JEWELRY JOINT STOCK COMPANY",
+      "short_name": "PNJ",
+      "director": "Lê Trí Thông",
+      "headquarters_address": "170E Phan Đăng Lưu, Phường 3, Quận Phú Nhuận, TP.HCM",
+      "issued_date": "1988-04-28",
+      "email": "hr@pnj.com.vn",
+      "phone_number": "028 3995 1703",
+      "website": "https://www.pnj.com.vn",
+      "logo_url": "https://cdn-new.topcv.vn/unsafe/200x/https://static.topcv.vn/company_logos/pnj-logo.jpg",
+      "cover_url": "",
+      "company_size": "1000-5000 nhân viên",
+      "category": "Kinh doanh / Bán hàng",
+      "address_list": [
+        { "city_id": 2, "city_name": "TP. Hồ Chí Minh", "address_detail": "170E Phan Đăng Lưu, Phú Nhuận" }
+      ],
+      "description_html": "<div><h3>Về PNJ</h3><p>PNJ là thương hiệu trang sức hàng đầu Việt Nam với hệ thống cửa hàng trên toàn quốc.</p></div>"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job-001",
+      "company_id": "comp-001",
+      "title": "Senior Frontend Developer (ReactJS / Next.js)",
+      "slug": "senior-frontend-developer-reactjs-nextjs-001",
+      "category": "Lập trình phần mềm",
+      "specialty": "Frontend Developer",
+      "job_type": "FULL_TIME",
+      "experience_level": "3-5 năm",
+      "education": "Đại học",
+      "gender": "Không yêu cầu",
+      "quantity": 3,
+      "salary": { "type": "RANGE", "min": 25000000, "max": 40000000, "currency": "VND" },
+      "work_location": [
+        { "city_id": 1, "city_name": "Hà Nội", "address_detail": "Tầng 3, Tòa FS GoldSeason, 47 Nguyễn Tuân" }
+      ],
+      "deadline": "2026-09-30T23:59:59Z",
+      "status": "PUBLISHED",
+      "is_hot": true,
+      "created_at": "2026-08-01T10:00:00Z",
+      "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Phát triển các tính năng UI/UX mới cho nền tảng Tuyển dụng TopCV bằng ReactJS, Next.js.</li><li>Tối ưu hóa hiệu năng ứng dụng (PageSpeed, Web Vitals) và nâng cao trải nghiệm người dùng.</li><li>Phối hợp chặt chẽ với đội ngũ Product Manager, UI/UX Designer và Backend Engineer.</li><li>Code review và mentoring cho junior developers trong team.</li></ul></div>",
+      "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Có tối thiểu 3 năm kinh nghiệm làm việc với ReactJS, Next.js, TypeScript.</li><li>Thành thạo Redux/Zustand, TailwindCSS/SCSS, RESTful API, GraphQL.</li><li>Có kinh nghiệm tối ưu SEO Web và Server-Side Rendering (SSR).</li><li>Khả năng làm việc nhóm tốt, chủ động trong công việc.</li></ul></div>",
+      "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Lương cứng up to 40M + Thưởng hiệu suất dự án theo quý.</li><li>Được đóng BHXH đầy đủ theo luật lao động.</li><li>Khám sức khỏe định kỳ hàng năm, du lịch/teambuilding.</li><li>Lộ trình thăng tiến Technical Lead rõ ràng.</li></ul></div>"
+    },
+    {
+      "id": "job-002",
+      "company_id": "comp-002",
+      "title": "Trưởng Nhóm Sales Logistics / Freight Forwarding",
+      "slug": "truong-nhom-sales-logistics-freight-forwarding-002",
+      "category": "Sales Xuất nhập khẩu/Logistics",
+      "specialty": "Sales Logistics",
+      "job_type": "FULL_TIME",
+      "experience_level": "2-3 năm",
+      "education": "Đại học",
+      "gender": "Không yêu cầu",
+      "quantity": 2,
+      "salary": { "type": "AGREEMENT", "min": 0, "max": 0, "currency": "VND" },
+      "work_location": [
+        { "city_id": 2, "city_name": "TP. Hồ Chí Minh", "address_detail": "Số 120 Đường Cộng Hòa, Tân Bình" }
+      ],
+      "deadline": "2026-09-15T23:59:59Z",
+      "status": "PUBLISHED",
+      "is_hot": false,
+      "created_at": "2026-08-02T08:00:00Z",
+      "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Tìm kiếm, tiếp cận và tư vấn khách hàng doanh nghiệp có nhu cầu xuất nhập khẩu đường biển (FCL/LCL), đường hàng không.</li><li>Quản lý và dẫn dắt đội ngũ Sales từ 3-5 thành viên hoàn thành chỉ tiêu doanh số.</li><li>Duy trì mối quan hệ tốt với các hãng tàu, đại lý vận tải quốc tế.</li></ul></div>",
+      "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Tốt nghiệp ĐH chuyên ngành Logistics, Ngoại thương, Kinh tế đối ngoại.</li><li>Tối thiểu 2 năm kinh nghiệm Sales trong lĩnh vực Freight Forwarding/Logistics.</li><li>Tiếng Anh giao tiếp tốt (đặc biệt đọc viết thư từ thương mại).</li></ul></div>",
+      "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Lương cứng 15M - 20M + % Hoa hồng doanh số cao.</li><li>Được trợ cấp điện thoại, xăng xe, phí tiếp khách.</li><li>Thưởng tháng 13 và thưởng vượt KPI năm.</li></ul></div>"
+    },
+    {
+      "id": "job-003",
+      "company_id": "comp-003",
+      "title": "Backend Developer (Java/Spring Boot)",
+      "slug": "backend-developer-java-spring-boot-003",
+      "category": "Lập trình phần mềm",
+      "specialty": "Backend Developer",
+      "job_type": "FULL_TIME",
+      "experience_level": "2-3 năm",
+      "education": "Đại học",
+      "gender": "Không yêu cầu",
+      "quantity": 5,
+      "salary": { "type": "RANGE", "min": 20000000, "max": 35000000, "currency": "VND" },
+      "work_location": [
+        { "city_id": 1, "city_name": "Hà Nội", "address_detail": "Tòa nhà FPT, 17 Duy Tân, Cầu Giấy" }
+      ],
+      "deadline": "2026-10-15T23:59:59Z",
+      "status": "PUBLISHED",
+      "is_hot": true,
+      "created_at": "2026-08-03T09:00:00Z",
+      "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Phát triển và bảo trì các dịch vụ backend sử dụng Java/Spring Boot.</li><li>Thiết kế và tối ưu hóa cơ sở dữ liệu PostgreSQL/MySQL.</li><li>Xây dựng RESTful API và tích hợp với các hệ thống bên thứ 3.</li><li>Viết unit test, integration test đảm bảo chất lượng code.</li></ul></div>",
+      "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Tối thiểu 2 năm kinh nghiệm với Java, Spring Boot, Spring Security.</li><li>Thành thạo SQL, ORM (Hibernate/JPA), Redis, RabbitMQ.</li><li>Có kinh nghiệm với Docker, CI/CD, Git.</li></ul></div>",
+      "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Lương thỏa thuận theo năng lực, review lương 2 lần/năm.</li><li>Chế độ BHXH, BHYT, BHTN đầy đủ.</li><li>Laptop làm việc, môi trường chuyên nghiệp.</li></ul></div>"
+    },
+    {
+      "id": "job-004",
+      "company_id": "comp-003",
+      "title": "UI/UX Designer",
+      "slug": "ui-ux-designer-004",
+      "category": "Công nghệ Thông tin",
+      "specialty": "UI/UX Design",
+      "job_type": "FULL_TIME",
+      "experience_level": "1-2 năm",
+      "education": "Cao đẳng",
+      "gender": "Không yêu cầu",
+      "quantity": 2,
+      "salary": { "type": "RANGE", "min": 15000000, "max": 25000000, "currency": "VND" },
+      "work_location": [
+        { "city_id": 2, "city_name": "TP. Hồ Chí Minh", "address_detail": "Tòa nhà FPT Tân Thuận, Quận 7" }
+      ],
+      "deadline": "2026-09-20T23:59:59Z",
+      "status": "PUBLISHED",
+      "is_hot": false,
+      "created_at": "2026-08-04T11:00:00Z",
+      "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Thiết kế giao diện người dùng cho các sản phẩm web và mobile.</li><li>Tạo wireframe, prototype, user flow cho các tính năng mới.</li><li>Nghiên cứu UX, thực hiện user testing và cải tiến sản phẩm.</li></ul></div>",
+      "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Thành thạo Figma, Adobe XD hoặc Sketch.</li><li>Hiểu biết về Material Design, Human Interface Guidelines.</li><li>Có portfolio thể hiện khả năng thiết kế.</li></ul></div>",
+      "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Lương cạnh tranh + thưởng project.</li><li>Được đào tạo và phát triển kỹ năng liên tục.</li><li>Văn phòng hiện đại, snack bar miễn phí.</li></ul></div>"
+    },
+    {
+      "id": "job-005",
+      "company_id": "comp-004",
+      "title": "Nhân Viên Kinh Doanh Trang Sức",
+      "slug": "nhan-vien-kinh-doanh-trang-suc-005",
+      "category": "Kinh doanh / Bán hàng",
+      "specialty": "Sales Retail",
+      "job_type": "FULL_TIME",
+      "experience_level": "Không yêu cầu",
+      "education": "Trung cấp",
+      "gender": "Nữ",
+      "quantity": 10,
+      "salary": { "type": "RANGE", "min": 8000000, "max": 15000000, "currency": "VND" },
+      "work_location": [
+        { "city_id": 2, "city_name": "TP. Hồ Chí Minh", "address_detail": "Hệ thống cửa hàng PNJ toàn TP.HCM" }
+      ],
+      "deadline": "2026-10-01T23:59:59Z",
+      "status": "PUBLISHED",
+      "is_hot": true,
+      "created_at": "2026-08-05T07:00:00Z",
+      "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Tư vấn và bán sản phẩm trang sức vàng, bạc, đá quý cho khách hàng.</li><li>Chăm sóc và duy trì mối quan hệ với khách hàng thân thiết.</li><li>Đạt KPI doanh số cá nhân và đội nhóm.</li></ul></div>",
+      "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Nữ, ngoại hình ưa nhìn, giao tiếp tốt.</li><li>Yêu thích ngành bán lẻ và thời trang trang sức.</li><li>Chịu được áp lực công việc, sẵn sàng làm ca.</li></ul></div>",
+      "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Lương cơ bản + hoa hồng hấp dẫn.</li><li>Được đào tạo bài bản về kiến thức trang sức.</li><li>Ưu đãi mua sản phẩm PNJ dành cho nhân viên.</li></ul></div>"
+    },
+    {
+      "id": "job-006",
+      "company_id": "comp-001",
+      "title": "Product Manager",
+      "slug": "product-manager-006",
+      "category": "Công nghệ Thông tin",
+      "specialty": "Product Management",
+      "job_type": "FULL_TIME",
+      "experience_level": "3-5 năm",
+      "education": "Đại học",
+      "gender": "Không yêu cầu",
+      "quantity": 1,
+      "salary": { "type": "RANGE", "min": 30000000, "max": 50000000, "currency": "VND" },
+      "work_location": [
+        { "city_id": 1, "city_name": "Hà Nội", "address_detail": "Tầng 3, Tòa FS GoldSeason, 47 Nguyễn Tuân" }
+      ],
+      "deadline": "2026-09-25T23:59:59Z",
+      "status": "PUBLISHED",
+      "is_hot": true,
+      "created_at": "2026-08-06T14:00:00Z",
+      "description_html": "<div><h3>Mô tả công việc</h3><ul><li>Quản lý và phát triển roadmap sản phẩm tuyển dụng TopCV.</li><li>Phân tích dữ liệu người dùng, đề xuất cải tiến sản phẩm.</li><li>Làm việc chặt chẽ với đội Engineering, Design và Marketing.</li></ul></div>",
+      "requirements_html": "<div><h3>Yêu cầu ứng viên</h3><ul><li>Tối thiểu 3 năm kinh nghiệm Product Manager trong lĩnh vực Tech.</li><li>Kỹ năng phân tích dữ liệu, SQL cơ bản.</li><li>Kinh nghiệm với Agile/Scrum methodology.</li></ul></div>",
+      "benefits_html": "<div><h3>Quyền lợi</h3><ul><li>Package lương hấp dẫn, stock option.</li><li>Flexible working hours.</li><li>Budget học tập và phát triển cá nhân.</li></ul></div>"
+    }
+  ],
+  "locations": [
+    { "id": 1, "name": "Hà Nội" },
+    { "id": 2, "name": "TP. Hồ Chí Minh" },
+    { "id": 3, "name": "Đà Nẵng" },
+    { "id": 4, "name": "Hải Phòng" },
+    { "id": 5, "name": "Cần Thơ" },
+    { "id": 6, "name": "Bình Dương" },
+    { "id": 7, "name": "Đồng Nai" }
+  ],
+  "cvs": []
+}
